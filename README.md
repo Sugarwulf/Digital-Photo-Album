@@ -1,6 +1,5 @@
 # Digital-Photo-Album
 CRUD - Node/Express/Mongoose/Angular/Filestack
-
 1. pictures.ts in models folder to define schema
 2. app.ts Opened data base, seed it with sample data in object form, import models & api, app.use(etc.)
 3. picture.ts in api folder, created routers for CRUD

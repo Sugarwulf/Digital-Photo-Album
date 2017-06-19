@@ -1,0 +1,28 @@
+<h2>Photos</h2>
+
+<ul>
+  <li ng-repeat="picture in controller.pictures">
+    {{picture.filename}} <br> <img  height="200px" width = "200px" ng-src="{{picture.ImageUrl}}"> <br> {{picture.description}} <br>
+    <a href="/edit/{{picture._id}}">Edit |</a>
+    <a href="#" ng-click="controller.remove(picture._id)">Delete</a> <hr>
+  </li>
+</ul>
+
+<ul class= "bg-danger">
+  <li ng-repeat="error in controller.validationErrors">
+   {{error.message}}
+  </li>
+</ul>
+
+<form ng-submit="controller.save()">
+  <div class="form-group">
+    <label>Photo Name</label>
+    <input ng-model="controller.picture.filename" class="form-control">
+    <label>Photo URL</label>
+    <input ng-model="controller.picture.ImageUrl" class="form-control">
+    <!-- <img ng-src="{{controller.picture.url}}" > -->
+    <label>Description</label>
+    <input ng-model="controller.picture.description" class="form-control">
+  </div>
+<button class="btn btn-primary">Create new photo</button>
+</form>

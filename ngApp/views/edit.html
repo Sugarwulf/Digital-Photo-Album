@@ -1,0 +1,29 @@
+<form ng-submit="controller.save()">
+  <div class="form-group">
+    <label>Photo Name</label>
+    <input ng-model="controller.picture.filename" class="form-control">
+    <label>Photo URL</label>
+    <input ng-model="controller.picture.ImageUrl" class="form-control">
+    <!-- <img ng-src="{{controller.picture.url}}" > -->
+    <label>Description</label>
+    <input ng-model="controller.picture.description" class="form-control">
+  </div>
+<button class="btn btn-primary" >Edit photo</button>
+</form>
+
+<ul class= "bg-danger">
+  <li ng-repeat="error in controller.validationErrors">
+   {{error.message}}
+  </li>
+</ul>
+
+
+
+
+
+
+<!-- <ul class= "bg-danger">
+  <li ng-repeat="error in controller.validationErrors">
+   {{error.message}}
+  </li>
+</ul> -->

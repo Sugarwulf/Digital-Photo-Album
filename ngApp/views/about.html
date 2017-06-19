@@ -1,0 +1,14 @@
+<!-- <h2>About</h2>
+<p>
+    {{controller.message}}
+</p> -->
+
+
+<button class ="btn btn-primary" ng-click="controller.pickFile()">Upload</button>
+
+  <h2>{{controller.file.filename}}</h2>
+
+  <img ng-src="{{controller.file.url | fpConvert:{w: 400}  }}" alt="{{controller.file.filename}}" />
+
+
+<!-- https://cdn.filepicker.io/api/file/MQGZPJbwQxesaHDNOAqB -->
